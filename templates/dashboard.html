@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-10 mx-auto">
+        <div class="card bg-light bg-opacity-75">
+            <div class="card-header bg-info text-white">
+                <h4 class="mb-0">Disease Prediction Results</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="text-center">
+                            <h5>Uploaded Image</h5>
+                            <img src="data:image/jpeg;base64,{{ image }}" class="img-fluid rounded border border-success" alt="Uploaded leaf">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card bg-light border-success">
+                            <div class="card-body">
+                                <h5 class="card-title text-success">Prediction Details</h5>
+                                <hr>
+                                <p><strong>Disease:</strong> {{ prediction }}</p>
+                                <p><strong>Confidence:</strong> {{ confidence }}</p>
+                                <p><strong>Recommended Pesticide:</strong> {{ pesticide }}</p>
+                                <p><strong>Description:</strong> {{ description }}</p>
+                                <p><strong>Spray Rule:</strong> {{ spray_rule }}</p>
+                                
+                                {% if iot_command %}
+                                <div class="mt-4 p-3 bg-warning rounded">
+                                    <h6>IoT Device Status</h6>
+                                    <p>Command sent: <strong>{{ iot_command }}</strong></p>
+                                    <div class="spinner-border text-primary" role="status">
+                                        <span class="visually-hidden">Processing...</span>
+                                    </div>
+                                </div>
+                                {% else %}
+                                <div class="mt-4 p-3 bg-success rounded text-white">
+                                    <h6>Plant Status</h6>
+                                    <p>No treatment required. Plant is healthy!</p>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4 text-center">
+                    <a href="{{ url_for('index') }}" class="btn btn-primary">Analyze Another Image</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

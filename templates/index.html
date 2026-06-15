@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card bg-light bg-opacity-75">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">Cotton Leaf Disease Prediction</h4>
+            </div>
+            <div class="card-body">
+                <div class="text-center mb-4">
+                    <p class="lead">Upload an image of a cotton leaf to detect disease and get treatment recommendations</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card h-100 border-success">
+                            <div class="card-body text-center">
+                                <i class="bi bi-cloud-upload-fill" style="font-size: 3rem; color: #198754;"></i>
+                                <h5 class="card-title mt-3">Upload Image</h5>
+                                <p class="card-text">Upload a clear image of a cotton leaf</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 border-info">
+                            <div class="card-body text-center">
+                                <i class="bi bi-cpu" style="font-size: 3rem; color: #0dcaf0;"></i>
+                                <h5 class="card-title mt-3">AI Prediction</h5>
+                                <p class="card-text">Our AI model will analyze the image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <form method="post" enctype="multipart/form-data" action="{{ url_for('predict') }}">
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Upload cotton leaf image</label>
+                            <input class="form-control" type="file" id="formFile" name="file" accept="image/*" required>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success btn-lg">Predict Disease</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

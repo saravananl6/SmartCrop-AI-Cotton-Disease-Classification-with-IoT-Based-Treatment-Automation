@@ -1,0 +1,9 @@
+class,pesticide,description,spray_rule
+Aphids,Imidacloprid (Systemic),Systemic insecticide effective against aphids. Follow label for dosage.,>=90:1 spray; 70-89:2 sprays; <70:3 sprays
+Army worm,Spinosad or Lambda-cyhalothrin,Use insecticide effective against lepidopteran larvae. Follow safety instructions.,>=90:1 spray; 70-89:2 sprays; <70:3 sprays
+Bacterial blight,Copper-based bactericide (Copper oxychloride),Copper fungicide/bactericide; apply early and repeat as needed per label.,>=90:1 spray; 70-89:2 sprays; <70:3 sprays
+Cotton Boll Rot,Carbendazim or Thiophanate-methyl (fungicide),Fungicides used for boll rot management; integrate with cultural controls.,>=90:1 spray; 70-89:2 sprays; <70:3 sprays
+Green Cotton Boll,Good agronomic practices; targeted insecticide if larvae present,Inspect bolls — control pests causing boll problems; use specific insecticide as needed.,>=90:1 spray; 70-89:2 sprays; <70:3 sprays
+Healthy,None,No pesticide needed. Continue scouting and preventive measures.,Any:0 sprays (Healthy)
+Powdery mildew,Sulfur or Azoxystrobin (fungicide),Use fungicide recommended for powdery mildew; repeat treatments per label.,>=90:1 spray; 70-89:2 sprays; <70:3 sprays
+Target spot,Mancozeb or Chlorothalonil (fungicide),Protective fungicides for target spot; follow label and resistance management.,>=90:1 spray; 70-89:2 sprays; <70:3 sprays
